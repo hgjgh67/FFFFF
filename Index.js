@@ -53,6 +53,24 @@ const y=Math.pow(x,2);
 ctx.fillRect(x*scaleX+xAxis,yAxis-scaleY*y,4,4);
 }
 
+const canvasPlot = document.getElementById('canvas_plot')
+const ctx = canvasPlot.getContext('2d')
+
+ctx.strokeRect(20, 20, 150, 100);
+ctx.font = "20px Georgia";
+ctx.fillText("Hello World!", 10, 50);
+
+ctx.font = "30px Verdana";
+
+var gradient = ctx.createLinearGradient(0, 0, 300, 0);
+gradient.addColorStop("0", "magenta");
+gradient.addColorStop("0.5", "blue");
+gradient.addColorStop("1.0", "red");
+
+
+ctx.fillStyle = gradient;
+ctx.fillText("Big smile!", 10, 90);
+
 
 
 
